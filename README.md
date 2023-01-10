@@ -69,7 +69,7 @@ import Capacitor
 ## Usage
 
 ```typescript
-import { LineLogin } from 'capacitor-line-login'
+import { LineLogin, LoginResult } from 'capacitor-line-login'
 ```
 
 ```typescript

@@ -48,7 +48,8 @@ repositories {
 
 
 dependencies {
-    implementation "com.linecorp.linesdk:linesdk:5.8.0"
+    implementation "com.linecorp.linesdk:linesdk:5.8.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"

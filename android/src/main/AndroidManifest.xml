@@ -1,8 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="rabianr.capacitor.linelogin" xmlns:tools="http://schemas.android.com/tools">
-
-    <application tools:replace="android:allowBackup" android:allowBackup="true">
-    </application>
+    package="rabianr.capacitor.linelogin">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
