@@ -31,9 +31,9 @@ import LineSDK
 
             switch result {
             case .success(let loginResult):
-                var data: [String: Any?] = [:]
+                var data: [String: String] = [:]
                 data["accessToken"] = loginResult.accessToken.value
-                data["expiresAt"] = loginResult.accessToken.expiresAt.timeIntervalSince1970
+                data["expiresAt"] = String(loginResult.accessToken.expiresAt.timeIntervalSince1970)
                 data["email"] = loginResult.accessToken.IDToken?.payload.email
 
                 if let profile = loginResult.userProfile {
@@ -41,7 +41,7 @@ import LineSDK
                     data["displayName"] = profile.displayName
 
                     if let pictureUrl = profile.pictureURL {
-                        data["pictureUrl"] = pictureUrl
+                        data["pictureUrl"] = pictureUrl.absoluteString
                     }
                 }
 
@@ -77,7 +77,7 @@ import LineSDK
                 "code": ResponseCode.Success,
                 "data": [
                     "accessToken": accessToken.value,
-                    "expiresAt": accessToken.expiresAt.timeIntervalSince1970,
+                    "expiresAt": String(accessToken.expiresAt.timeIntervalSince1970),
                 ],
             ])
         } else {
@@ -93,7 +93,7 @@ import LineSDK
                     "code": ResponseCode.Success,
                     "data": [
                         "accessToken": accessToken.value,
-                        "expiresAt": accessToken.expiresAt.timeIntervalSince1970,
+                        "expiresAt": String(accessToken.expiresAt.timeIntervalSince1970),
                     ],
                 ])
             case .failure(let error):
