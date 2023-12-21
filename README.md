@@ -3,7 +3,7 @@
 Capacitor plugin to support LINE Login
 
 ## Versions
-This plugin is for Capacitor 4.
+This plugin is for Capacitor 5.
 
 ## Installation
 
@@ -39,7 +39,7 @@ Update the following:
 +               <string>Editor</string>
 +               <key>CFBundleURLSchemes</key>
 +               <array>
-+                   <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</+tring>
++                   <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 +               </array>
 +           </dict>
 +       </array>
